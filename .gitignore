@@ -1,0 +1,10 @@
+node_modules
+dist
+out
+.DS_Store
+*.log*
+*.tsbuildinfo
+src/**/*.js
+src/**/*.d.ts
+!src/preload/index.d.ts
+!src/renderer/src/env.d.ts

@@ -1,0 +1,27 @@
+appId: com.personal.interview-copilot
+productName: Interview Copilot
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!.npmrc'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!interview-copilot-dev-guide.md'
+win:
+  executableName: InterviewCopilot
+  icon: build/icon.ico
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+extraResources:
+  - from: build/icon.ico
+    to: icon.ico
+  - from: build/icon.png
+    to: icon.png
+npmRebuild: false
